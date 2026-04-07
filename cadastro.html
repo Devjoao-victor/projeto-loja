@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Cadastro</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h2>Criar Conta</h2>
+
+    <form action="salvar_usuario.php" method="POST">
+
+        <input type="text" name="nome" placeholder="Nome" required>
+
+        <input type="email" name="email" placeholder="Email" required>
+
+        <input type="password" name="senha" placeholder="Senha" required>
+
+        <!-- BOTÕES DE TIPO -->
+        <p>Escolha o tipo:</p>
+
+        <div class="tipo-container">
+            <button type="button" onclick="selecionarTipo('cliente')" id="btnCliente">
+                👤 Cliente
+            </button>
+
+            <button type="button" onclick="selecionarTipo('vendedor')" id="btnVendedor">
+                🧑‍💼 Vendedor
+            </button>
+        </div>
+
+        <!-- campo escondido -->
+        <input type="hidden" name="tipo" id="tipo" required>
+
+        <button type="submit" class="submit">Cadastrar</button>
+
+    </form>
+
+    <a href="index.html">Já tem conta? Fazer login</a>
+
+</div>
+
+<script>
+function selecionarTipo(tipo) {
+    document.getElementById("tipo").value = tipo;
+
+    // efeito visual
+    document.getElementById("btnCliente").classList.remove("ativo");
+    document.getElementById("btnVendedor").classList.remove("ativo");
+
+    if (tipo === "cliente") {
+        document.getElementById("btnCliente").classList.add("ativo");
+    } else {
+        document.getElementById("btnVendedor").classList.add("ativo");
+    }
+}
+</script>
+
+</body>
+</html>

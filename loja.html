@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Loja</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:Arial;
+    background:#0a0a0a;
+}
+
+/* NAVBAR */
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 40px;
+    background:#111;
+    color:white;
+}
+
+/* LADO ESQUERDO */
+.nav-left{
+    display:flex;
+    gap:20px;
+}
+
+.nav-left a{
+    color:white;
+    text-decoration:none;
+    font-size:14px;
+    transition:0.3s;
+}
+
+.nav-left a:hover{
+    color:gold;
+}
+
+/* LADO DIREITO */
+.nav-right a{
+    color:white;
+    text-decoration:none;
+    font-size:14px;
+    border:1px solid gold;
+    padding:8px 12px;
+    transition:0.3s;
+}
+
+.nav-right a:hover{
+    background:gold;
+    color:black;
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+
+    <!-- ESQUERDA -->
+    <div class="nav-left">
+        <a href="index.html">Login</a>
+        <a href="cadastro.html">Cadastro</a>
+    </div>
+
+    <!-- DIREITA -->
+    <div class="nav-right">
+        <a href="painel_vendedor.php">Área do Vendedor</a>
+    </div>
+
+</nav>
+
+</body>
+</html>
